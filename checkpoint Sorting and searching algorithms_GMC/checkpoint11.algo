@@ -1,0 +1,18 @@
+ALGORITHM Insertion sort
+VAR
+    i, j, n, temp: INTEGER;
+    arr : ARRAY_OF INTEGER [n];
+
+BEGIN
+    i=1;
+    WHILE (i<arr.length) DO
+        j=i-1;
+        temp=arr[i];
+        WHILE (j=>0 and arr[j]>temp) DO
+            arr[j+1]=arr[j];
+            j=j-1;
+        END_WHILE
+        arr[j+1]=temp;
+        i=i+1;
+    END_WHILE
+END
